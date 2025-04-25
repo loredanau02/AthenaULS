@@ -3,9 +3,14 @@ The Athena University Library System is currently an ongoing personal project th
 
 ## Current progress includes...
 
-✅Authentication System and role-based access control
-✅Student Interface, excluding frontend
-❌Librarian (Admin) Interface, excluding frontend
-✅Database Design, including model collections
-🟡UI/UX, including multi-panel interface, responsive design, and validation
-✅Secure API integration
+- ✅Authentication System and role-based access control
+
+- ✅Student Interface, excluding frontend
+
+- ❌Librarian (Admin) Interface, excluding frontend
+
+- ✅Database Design, including model collections
+
+- 🟡UI/UX, including multi-panel interface, responsive design, and validation
+
+- ✅Secure API integration
