@@ -1,0 +1,63 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
+}
+
+group 'com.athena.library'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+javafx {
+    version = "21"  // Using JavaFX 21 which is compatible with Java 23
+    modules = ['javafx.controls', 'javafx.fxml', 'javafx.web']
+}
+
+dependencies {
+    // JavaFX for UI
+    implementation 'org.openjfx:javafx-controls:21'
+    implementation 'org.openjfx:javafx-fxml:21'
+
+    // Firebase SDK
+    implementation 'com.google.firebase:firebase-admin:9.1.1'
+
+    // Google Cloud Libraries
+    implementation 'com.google.cloud:google-cloud-firestore:3.7.3'
+    implementation 'com.google.cloud:google-cloud-storage:2.20.1'
+
+    // Authentication and authorization
+    implementation 'com.google.auth:google-auth-library-oauth2-http:1.16.0'
+
+    // JSON processing
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+    // Apache Commons for utility functions
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
+    implementation 'commons-io:commons-io:2.11.0'
+
+    // Validation
+    implementation 'org.hibernate.validator:hibernate-validator:7.0.5.Final'
+    implementation 'org.glassfish:jakarta.el:4.0.2'
+
+    // Testing
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
+}
+
+application {
+    mainClass = 'com.athena.library.Main'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+// Ensure compatibility with Java 23
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(23)
+    }
+}
